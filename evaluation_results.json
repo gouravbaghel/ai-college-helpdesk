@@ -1,0 +1,318 @@
+{
+  "metrics": {
+    "retrieval_accuracy": 1.0,
+    "answer_relevance": 1.0,
+    "citation_accuracy": 1.0,
+    "avg_response_time": 0.1,
+    "unanswered_questions": 0,
+    "total_questions": 15
+  },
+  "test_results": [
+    {
+      "question": "What is the minimum attendance requirement?",
+      "expected_source": "Attendance_Regulations.pdf",
+      "retrieved_sources": [
+        "Attendance_Regulations.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "75%",
+        "attendance",
+        "minimum"
+      ],
+      "found_keywords": [
+        "75%",
+        "attendance"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Attendance"
+    },
+    {
+      "question": "What happens if a student has less than 75% attendance?",
+      "expected_source": "Attendance_Regulations.pdf",
+      "retrieved_sources": [
+        "Attendance_Regulations.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "detained",
+        "not permitted",
+        "repeat"
+      ],
+      "found_keywords": [
+        "detained",
+        "not permitted"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Attendance"
+    },
+    {
+      "question": "What is the condonation rule for attendance?",
+      "expected_source": "Attendance_Regulations.pdf",
+      "retrieved_sources": [
+        "Attendance_Regulations.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "condonation",
+        "10%",
+        "65%",
+        "1000"
+      ],
+      "found_keywords": [
+        "condonation",
+        "10%"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Attendance"
+    },
+    {
+      "question": "What grades can I get in the exams?",
+      "expected_source": "Examination_Rules.pdf",
+      "retrieved_sources": [
+        "Examination_Rules.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "O",
+        "A+",
+        "A",
+        "B+",
+        "B",
+        "C",
+        "F"
+      ],
+      "found_keywords": [
+        "O",
+        "A+"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Examination"
+    },
+    {
+      "question": "How do I calculate my CGPA?",
+      "expected_source": "Examination_Rules.pdf",
+      "retrieved_sources": [
+        "Examination_Rules.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "credits",
+        "grade points",
+        "sum"
+      ],
+      "found_keywords": [
+        "credits",
+        "grade points"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Examination"
+    },
+    {
+      "question": "What is the penalty for cheating in exams?",
+      "expected_source": "Examination_Rules.pdf",
+      "retrieved_sources": [
+        "Examination_Rules.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "disciplinary",
+        "cancellation",
+        "expulsion"
+      ],
+      "found_keywords": [
+        "disciplinary",
+        "cancellation"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Examination"
+    },
+    {
+      "question": "How much is the tuition fee for Computer Science?",
+      "expected_source": "Fee_Structure_2024_25.pdf",
+      "retrieved_sources": [
+        "Fee_Structure_2024_25.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "1,20,000",
+        "per annum"
+      ],
+      "found_keywords": [
+        "1,20,000",
+        "per annum"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Fees"
+    },
+    {
+      "question": "What is the penalty for late fee payment?",
+      "expected_source": "Fee_Structure_2024_25.pdf",
+      "retrieved_sources": [
+        "Fee_Structure_2024_25.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "100",
+        "per day",
+        "late"
+      ],
+      "found_keywords": [
+        "100",
+        "per day"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Fees"
+    },
+    {
+      "question": "When does the hostel gate close at night?",
+      "expected_source": "Hostel_Rules.pdf",
+      "retrieved_sources": [
+        "Hostel_Rules.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "9:00 PM",
+        "curfew",
+        "gate"
+      ],
+      "found_keywords": [
+        "9:00 PM",
+        "curfew"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Hostel"
+    },
+    {
+      "question": "What are the mess timings for lunch?",
+      "expected_source": "Hostel_Rules.pdf",
+      "retrieved_sources": [
+        "Hostel_Rules.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "12:30",
+        "2:00",
+        "lunch"
+      ],
+      "found_keywords": [
+        "12:30",
+        "2:00"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Hostel"
+    },
+    {
+      "question": "Can visitors enter hostel rooms?",
+      "expected_source": "Hostel_Rules.pdf",
+      "retrieved_sources": [
+        "Hostel_Rules.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "visitor",
+        "lounge",
+        "not allowed"
+      ],
+      "found_keywords": [
+        "visitor",
+        "lounge"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Hostel"
+    },
+    {
+      "question": "How can I get the Director's Merit Scholarship?",
+      "expected_source": "Scholarship_Information.pdf",
+      "retrieved_sources": [
+        "Scholarship_Information.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "top 5%",
+        "CGPA",
+        "9.0",
+        "50%"
+      ],
+      "found_keywords": [
+        "top 5%",
+        "CGPA"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Scholarship"
+    },
+    {
+      "question": "What is the criteria for need-based financial aid?",
+      "expected_source": "Scholarship_Information.pdf",
+      "retrieved_sources": [
+        "Scholarship_Information.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "income",
+        "3,00,000",
+        "100%"
+      ],
+      "found_keywords": [
+        "income",
+        "3,00,000"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Scholarship"
+    },
+    {
+      "question": "When does the odd semester start?",
+      "expected_source": "Academic_Calendar_2024_25.pdf",
+      "retrieved_sources": [
+        "Academic_Calendar_2024_25.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "August",
+        "2024"
+      ],
+      "found_keywords": [
+        "August",
+        "2024"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Calendar"
+    },
+    {
+      "question": "When are the end semester exams for the even semester?",
+      "expected_source": "Academic_Calendar_2024_25.pdf",
+      "retrieved_sources": [
+        "Academic_Calendar_2024_25.pdf"
+      ],
+      "source_correct": true,
+      "expected_keywords": [
+        "May",
+        "June",
+        "2025"
+      ],
+      "found_keywords": [
+        "May",
+        "June"
+      ],
+      "answer_relevant": true,
+      "latency_seconds": 0.1,
+      "category": "Calendar"
+    }
+  ],
+  "evaluated_at": "2026-11-02 14:02:48",
+  "message": "Mock evaluation results. Run with --live flag for real evaluation."
+}

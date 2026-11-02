@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Databases
+college_helpdesk.db
+chroma_db/
+*.sqlite3
+uploads/
+~$*
+
+
+# Logs
+logs/
+*.log
+
+# pytest
+.pytest_cache/
+htmlcov/
+.coverage
+.tox/
+coverage.xml
+
+# Mac OS
+.DS_Store

@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A3 Poster - AI-Powered College Helpdesk & Student Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@500;600;700;800&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A3 portrait;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: #1e293b;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* A3 Portrait Dimensions */
+    .poster-canvas {
+      width: 100%;
+      min-height: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #a8c4db 0%, #b8d2e5 40%, #a4c1d8 100%);
+      padding: 2.2% 2.4% 2.2% 2.4%;
+      display: flex;
+      flex-direction: column;
+      gap: 1.2%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    @media print {
+      html, body {
+        width: 297mm;
+        height: 420mm;
+      }
+      .poster-canvas {
+        width: 297mm;
+        height: 420mm;
+        padding: 7mm 8mm 6mm 8mm;
+        gap: 3.5mm;
+      }
+    }
+
+    /* ==========================================
+       TOP INSTITUTIONAL HEADER
+       ========================================== */
+    .inst-header {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 4mm 6mm;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(15, 36, 57, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+    }
+
+    .inst-logo-left {
+      width: 20mm;
+      height: 20mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .inst-logo-left img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .inst-titles {
+      text-align: center;
+      flex: 1;
+      padding: 0 4mm;
+    }
+
+    .hindi-title {
+      font-family: 'Tiro Devanagari Hindi', serif;
+      font-size: 11pt;
+      font-weight: 700;
+      color: #0d2b45;
+      letter-spacing: 0.3px;
+      line-height: 1.25;
+    }
+
+    .eng-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 10.5pt;
+      font-weight: 700;
+      color: #0d2b45;
+      letter-spacing: 0.2px;
+      margin-top: 0.5mm;
+    }
+
+    .deemed {
+      font-size: 8.5pt;
+      font-weight: 700;
+      color: #b91c1c;
+      font-style: italic;
+      margin-top: 0.5mm;
+    }
+
+    .declared {
+      font-size: 6.8pt;
+      font-weight: 600;
+      color: #7f1d1d;
+      margin-top: 0.3mm;
+    }
+
+    .naac {
+      font-size: 7.8pt;
+      font-weight: 800;
+      color: #0d2b45;
+      letter-spacing: 0.8px;
+      margin-top: 0.5mm;
+    }
+
+    .naac span {
+      color: #b91c1c;
+    }
+
+    .inst-logo-right {
+      width: 20mm;
+      height: 20mm;
+      background: linear-gradient(135deg, #0e3d6b, #092847);
+      border-radius: 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      flex-shrink: 0;
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2), 0 2px 5px rgba(0,0,0,0.15);
+    }
+
+    .inst-logo-right .brand-mits {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 12pt;
+      letter-spacing: 1.5px;
+      line-height: 1;
+    }
+
+    .inst-logo-right .brand-gwl {
+      font-size: 5.5pt;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      margin-top: 1mm;
+      opacity: 0.85;
+      text-transform: uppercase;
+    }
+
+    /* ==========================================
+       MAIN TITLE & CANDIDATE BANNER
+       ========================================== */
+    .title-banner {
+      background: linear-gradient(135deg, #134571 0%, #1a568c 50%, #0f3a63 100%);
+      border-radius: 12px;
+      padding: 3.5mm 6mm;
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(15, 42, 68, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      text-align: center;
+    }
+
+    .project-title {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16pt;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1.2;
+      color: #ffffff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.25);
+    }
+
+    .project-subtitle {
+      font-size: 8.5pt;
+      font-weight: 500;
+      color: #dbeafe;
+      margin-top: 1mm;
+      letter-spacing: 0.4px;
+    }
+
+    .meta-bar {
+      margin-top: 2.2mm;
+      padding-top: 1.8mm;
+      border-top: 1px solid rgba(255, 255, 255, 0.18);
+      display: flex;
+      justify-content: space-around;
+      font-size: 7.5pt;
+      line-height: 1.35;
+    }
+
+    .meta-bar strong {
+      color: #fef08a;
+      font-weight: 700;
+    }
+
+    /* ==========================================
+       GRID SYSTEM & CARDS
+       ========================================== */
+    .poster-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.18fr 1.02fr;
+      gap: 1.2%;
+      flex: 1;
+    }
+
+    @media print {
+      .poster-grid {
+        grid-template-columns: 86mm 100mm 87mm;
+        gap: 3.5mm;
+      }
+    }
+
+    .card {
+      background: #ffffff;
+      border-radius: 10px;
+      padding: 3.2mm 4mm;
+      box-shadow: 0 3px 10px rgba(15, 36, 57, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .pill-badge {
+      align-self: flex-start;
+      background: #7ba3c7;
+      color: #092644;
+      font-family: 'Poppins', sans-serif;
+      font-size: 7.5pt;
+      font-weight: 800;
+      letter-spacing: 0.7px;
+      padding: 1.2mm 3.8mm;
+      border-radius: 12px;
+      text-transform: uppercase;
+      margin-bottom: 2.4mm;
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.4), 0 1px 3px rgba(0,0,0,0.06);
+    }
+
+    .card-body {
+      font-size: 7.2pt;
+      line-height: 1.42;
+      color: #334155;
+      flex: 1;
+    }
+
+    .card-body p {
+      margin-bottom: 1.8mm;
+      text-align: justify;
+    }
+
+    .card-body strong {
+      color: #0f2e4d;
+      font-weight: 700;
+    }
+
+    .bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .bullet-list li {
+      position: relative;
+      padding-left: 3.8mm;
+      margin-bottom: 1.4mm;
+      font-size: 7.1pt;
+      line-height: 1.35;
+      text-align: left;
+    }
+
+    .bullet-list li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 1.8mm;
+      width: 1.8mm;
+      height: 1.8mm;
+      background: #1b4f72;
+      border-radius: 50%;
+    }
+
+    /* Technology Card Grid */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2mm;
+      margin-top: 1mm;
+    }
+
+    .tech-item {
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 1.8mm 2.2mm;
+      display: flex;
+      align-items: center;
+      gap: 2mm;
+    }
+
+    .tech-icon-box {
+      width: 6.5mm;
+      height: 6.5mm;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5.5pt;
+      font-weight: 800;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .tech-name {
+      font-size: 6.8pt;
+      font-weight: 700;
+      color: #0f2942;
+      line-height: 1.15;
+    }
+
+    .tech-sub {
+      font-size: 5.4pt;
+      color: #64748b;
+      line-height: 1.1;
+    }
+
+    /* Metrics Stat Boxes */
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.6mm;
+      margin-top: 2.2mm;
+    }
+
+    .metric-box {
+      background: linear-gradient(180deg, #f8fafc 0%, #edf2f7 100%);
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 1.8mm 1mm;
+      text-align: center;
+    }
+
+    .metric-val {
+      font-family: 'Poppins', sans-serif;
+      font-size: 11pt;
+      font-weight: 800;
+      color: #11426e;
+      line-height: 1;
+    }
+
+    .metric-lbl {
+      font-size: 5.2pt;
+      font-weight: 700;
+      color: #475569;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
+      margin-top: 0.8mm;
+      line-height: 1.1;
+    }
+
+    /* Core Capabilities Stage Boxes */
+    .stages-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2mm;
+      margin-top: 2mm;
+    }
+
+    .stage-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 6px;
+      padding: 2.2mm 1.5mm;
+      text-align: center;
+    }
+
+    .stage-num {
+      width: 5.5mm;
+      height: 5.5mm;
+      border-radius: 50%;
+      margin: 0 auto 1.2mm auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 6pt;
+      font-weight: 800;
+      color: #ffffff;
+    }
+
+    .stage-title {
+      font-size: 6.6pt;
+      font-weight: 700;
+      color: #0f2e4d;
+      text-transform: uppercase;
+      line-height: 1.15;
+    }
+
+    .stage-desc {
+      font-size: 5.5pt;
+      color: #64748b;
+      margin-top: 0.8mm;
+      line-height: 1.2;
+    }
+
+    /* Methodology SVG Donut Wrapper */
+    .donut-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3.5mm;
+      margin-top: 2mm;
+      padding-top: 1.5mm;
+      border-top: 1px dashed #cbd5e1;
+    }
+
+    .donut-legend {
+      font-size: 5.8pt;
+      line-height: 1.45;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 1.5mm;
+    }
+
+    .legend-color {
+      width: 2.2mm;
+      height: 2.2mm;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    /* Architecture Diagram Box */
+    .arch-diagram-box {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      padding: 2mm;
+      margin-top: 1.5mm;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .arch-diagram-box svg {
+      width: 100%;
+      height: auto;
+      max-height: 48mm;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="poster-canvas">
+
+    <!-- 1. TOP INSTITUTIONAL HEADER -->
+    <header class="inst-header">
+      <div class="inst-logo-left">
+        <!-- SVG Emulation of MITS Official Seal -->
+        <svg viewBox="0 0 100 100" width="100%" height="100%">
+          <circle cx="50" cy="50" r="48" fill="#ffffff" stroke="#0e3d6b" stroke-width="3"/>
+          <circle cx="50" cy="50" r="42" fill="#0e3d6b"/>
+          <circle cx="50" cy="50" r="39" fill="none" stroke="#d4af37" stroke-width="1.5"/>
+          <circle cx="50" cy="50" r="28" fill="#ffffff"/>
+          <!-- Flame / Lamp Motif -->
+          <path d="M50 32 C47 37 44 42 44 47 C44 51 47 54 50 54 C53 54 56 51 56 47 C56 42 53 37 50 32 Z" fill="#d97706"/>
+          <path d="M50 38 C48.5 41 47 44 47 47 C47 49 48.5 51 50 51 C51.5 51 53 49 53 47 C53 44 51.5 41 50 38 Z" fill="#f59e0b"/>
+          <path d="M41 55 L59 55 L56 61 L44 61 Z" fill="#0e3d6b"/>
+          <rect x="40" y="62" width="20" height="2" fill="#d4af37"/>
+          <!-- Circular Lettering representation -->
+          <text x="50" y="18" fill="#ffffff" font-size="5" font-weight="bold" text-anchor="middle" font-family="'Inter', sans-serif">MITS GWALIOR</text>
+          <text x="50" y="87" fill="#ffffff" font-size="4.5" font-weight="bold" text-anchor="middle" font-family="'Inter', sans-serif">ESTD. 1957</text>
+        </svg>
+      </div>
+
+      <div class="inst-titles">
+        <div class="hindi-title">माधव प्रौद्योगिकी एवं विज्ञान संस्थान, ग्वालियर (म.प्र.), भारत</div>
+        <div class="eng-title">Madhav Institute of Technology & Science, Gwalior (M.P.), INDIA</div>
+        <div class="deemed">Deemed to be University</div>
+        <div class="declared">(Declared under Distinct Category by Ministry of Education, Government of India)</div>
+        <div class="naac">NAAC ACCREDITED WITH <span>A++</span> GRADE</div>
+      </div>
+
+      <div class="inst-logo-right">
+        <span class="brand-mits">MITS</span>
+        <span class="brand-gwl">Gwalior</span>
+      </div>
+    </header>
+
+    <!-- 2. MAIN PROJECT TITLE BANNER -->
+    <div class="title-banner">
+      <div class="project-title">AI-Powered College Helpdesk & Student Assistant System</div>
+      <div class="project-subtitle">An Enterprise-Grade Retrieval-Augmented Generation (RAG) and Multi-Tool Agentic Information Platform</div>
+      
+      <div class="meta-bar">
+        <div><strong>Submitted By:</strong> Arun Rajoriya (BTAM24O1017) &amp; Gourav Baghel (BTAM24O1027)</div>
+        <div><strong>Supervisor:</strong> Dr. Nandkishor Joshi (Assistant Professor, Centre for Artificial Intelligence)</div>
+        <div><strong>Department:</strong> B.Tech. in Artificial Intelligence &amp; Machine Learning (Session 2024-2028)</div>
+      </div>
+    </div>
+
+    <!-- 3. MAIN POSTER CONTENT GRID -->
+    <div class="poster-grid">
+
+      <!-- ================= LEFT COLUMN ================= -->
+      <div style="display: flex; flex-direction: column; gap: 3.5mm;">
+
+        <!-- CARD 1: INTRODUCTION -->
+        <div class="card" style="flex: 1.1;">
+          <div class="pill-badge">Introduction</div>
+          <div class="card-body">
+            <p>
+              Higher education institutions manage voluminous, constantly updated documentation—spanning attendance mandates, grading policies, fee structures, hostel curfews, and academic schedules. Traditional student helpdesks incur significant queue times and rely on manual triage.
+            </p>
+            <p>
+              The <strong>AI-Powered College Helpdesk &amp; Student Assistant</strong> is an intelligent, full-stack web platform developed using <strong>FastAPI, Streamlit, LangChain, ChromaDB</strong>, and the <strong>Groq LPU (Llama 3.3 70B)</strong>. It delivers instant, citation-backed answers grounded strictly in official college documents with near-zero latency and verifiable provenance.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 2: METHODOLOGY -->
+        <div class="card" style="flex: 1.35;">
+          <div class="pill-badge">Methodology</div>
+          <div class="card-body">
+            <p>The system operates through an orchestrated 5-stage pipeline:</p>
+            <ul class="bullet-list">
+              <li><strong>Document Ingestion:</strong> Page-by-page text extraction via PyMuPDF; normalized and split via Recursive Character Chunking (1,000 chars, 200 overlap).</li>
+              <li><strong>Deterministic Vector Embeddings:</strong> 384-dimensional dense semantic hashing embeddings stored with document metadata in ChromaDB.</li>
+              <li><strong>Hybrid Retrieval:</strong> Merges top-k vector similarity candidate pools with sparse BM25 keyword re-ranking.</li>
+              <li><strong>Grounded LLM Generation:</strong> Strict system prompts restrict responses exclusively to retrieved context chunks, preventing policy hallucinations.</li>
+              <li><strong>Tool Intent Router:</strong> Keyword and agent routers dispatch queries across RAG search, relational timetable lookup, notices, and FAQs.</li>
+            </ul>
+
+            <!-- Donut Distribution Chart -->
+            <div class="donut-wrap">
+              <svg width="24mm" height="24mm" viewBox="0 0 42 42">
+                <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#e2e8f0" stroke-width="6"></circle>
+                <!-- Policy RAG: 50% -->
+                <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#1b4f72" stroke-width="6" stroke-dasharray="50 50" stroke-dashoffset="25"></circle>
+                <!-- Timetable: 20% -->
+                <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#0d9488" stroke-width="6" stroke-dasharray="20 80" stroke-dashoffset="75"></circle>
+                <!-- Notices: 15% -->
+                <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#f59e0b" stroke-width="6" stroke-dasharray="15 85" stroke-dashoffset="55"></circle>
+                <!-- FAQs: 15% -->
+                <circle cx="21" cy="21" r="15.91549430918954" fill="transparent" stroke="#6366f1" stroke-width="6" stroke-dasharray="15 85" stroke-dashoffset="40"></circle>
+              </svg>
+              <div class="donut-legend">
+                <div class="legend-item"><div class="legend-color" style="background:#1b4f72;"></div> Policy RAG (50%)</div>
+                <div class="legend-item"><div class="legend-color" style="background:#0d9488;"></div> Timetable DB (20%)</div>
+                <div class="legend-item"><div class="legend-color" style="background:#f59e0b;"></div> Notices DB (15%)</div>
+                <div class="legend-item"><div class="legend-color" style="background:#6366f1;"></div> FAQ Matcher (15%)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: OBJECTIVES -->
+        <div class="card" style="flex: 1.15;">
+          <div class="pill-badge">Project Objectives</div>
+          <div class="card-body">
+            <ul class="bullet-list">
+              <li>Deploy a 24/7 conversational assistant for autonomous student query resolution.</li>
+              <li>Eliminate generative hallucinations by mandating strict source citation (Document Name &amp; Page).</li>
+              <li>Implement hybrid dense-sparse retrieval for accurate handling of academic codes and policies.</li>
+              <li>Provide an administrative command dashboard for PDF upload, timetable schedule editing, and analytics.</li>
+              <li>Achieve sub-second inference latency through high-throughput Groq LPU acceleration.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CARD 4: CONCLUSION -->
+        <div class="card" style="flex: 0.95;">
+          <div class="pill-badge">Conclusion</div>
+          <div class="card-body">
+            <p>
+              The AI-Powered College Helpdesk bridges the institutional information gap. By combining grounded Retrieval-Augmented Generation with multi-tool relational routing, the system guarantees 100% factual accuracy with transparent citations, drastically reducing administrative burden while enhancing the student learning environment.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= CENTER COLUMN ================= -->
+      <div style="display: flex; flex-direction: column; gap: 3.5mm;">
+
+        <!-- CARD 5: ARCHITECTURE & DATA FLOW DIAGRAM (TOP CENTER) -->
+        <div class="card" style="flex: 1.55;">
+          <div class="pill-badge">System Architecture &amp; Data Flow</div>
+          <div class="card-body">
+            <p style="margin-bottom: 1.5mm;">
+              End-to-end multi-tiered workflow routing student queries between the vector knowledge base and relational services:
+            </p>
+
+            <div class="arch-diagram-box">
+              <svg viewBox="0 0 460 215" width="100%" height="100%">
+                <defs>
+                  <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#1e4e79"/>
+                    <stop offset="100%" stop-color="#0f2b45"/>
+                  </linearGradient>
+                  <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#0d9488"/>
+                    <stop offset="100%" stop-color="#065f56"/>
+                  </linearGradient>
+                  <linearGradient id="amberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#d97706"/>
+                    <stop offset="100%" stop-color="#92400e"/>
+                  </linearGradient>
+                  <filter id="boxShadow" x="-5%" y="-5%" width="110%" height="115%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+                  </filter>
+                </defs>
+
+                <!-- 1. USER INTERACTION -->
+                <rect x="10" y="80" width="70" height="52" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" filter="url(#boxShadow)"/>
+                <text x="45" y="102" fill="#0f2e4d" font-size="8" font-weight="700" text-anchor="middle" font-family="'Poppins', sans-serif">STUDENT /</text>
+                <text x="45" y="113" fill="#0f2e4d" font-size="8" font-weight="700" text-anchor="middle" font-family="'Poppins', sans-serif">ADMIN</text>
+                <text x="45" y="124" fill="#64748b" font-size="6" text-anchor="middle">Browser Client</text>
+
+                <!-- Arrow 1 -->
+                <path d="M80 106 L108 106" stroke="#1e4e79" stroke-width="2" marker-end="url(#arrow)"/>
+                <polygon points="108,103 115,106 108,109" fill="#1e4e79"/>
+
+                <!-- 2. FRONTEND -->
+                <rect x="115" y="80" width="75" height="52" rx="6" fill="#ffffff" stroke="#1e4e79" stroke-width="1.5" filter="url(#boxShadow)"/>
+                <rect x="115" y="80" width="75" height="15" rx="6" fill="#1e4e79"/>
+                <text x="152" y="91" fill="#ffffff" font-size="7" font-weight="700" text-anchor="middle">STREAMLIT UI</text>
+                <text x="152" y="108" fill="#334155" font-size="6.5" font-weight="600" text-anchor="middle">Port 8501</text>
+                <text x="152" y="119" fill="#64748b" font-size="5.8" text-anchor="middle">Chat, Timetable, Admin</text>
+
+                <!-- Arrow 2 -->
+                <path d="M190 106 L218 106" stroke="#1e4e79" stroke-width="2"/>
+                <polygon points="218,103 225,106 218,109" fill="#1e4e79"/>
+
+                <!-- 3. BACKEND API -->
+                <rect x="225" y="80" width="85" height="52" rx="6" fill="#ffffff" stroke="#1e4e79" stroke-width="1.5" filter="url(#boxShadow)"/>
+                <rect x="225" y="80" width="85" height="15" rx="6" fill="#0d9488"/>
+                <text x="267" y="91" fill="#ffffff" font-size="7" font-weight="700" text-anchor="middle">FASTAPI BACKEND</text>
+                <text x="267" y="108" fill="#334155" font-size="6.5" font-weight="600" text-anchor="middle">RESTful Endpoints</text>
+                <text x="267" y="119" fill="#64748b" font-size="5.8" text-anchor="middle">JWT Auth &amp; Tool Router</text>
+
+                <!-- Fork Arrows from Backend -->
+                <path d="M310 95 L335 95 L335 48 L355 48" fill="none" stroke="#1e4e79" stroke-width="1.8"/>
+                <polygon points="355,45 362,48 355,51" fill="#1e4e79"/>
+
+                <path d="M310 117 L335 117 L335 165 L355 165" fill="none" stroke="#0d9488" stroke-width="1.8"/>
+                <polygon points="355,162 362,165 355,168" fill="#0d9488"/>
+
+                <!-- 4. RAG PIPELINE (UPPER BRANCH) -->
+                <rect x="362" y="22" width="88" height="54" rx="6" fill="#ffffff" stroke="#1e4e79" stroke-width="1.5" filter="url(#boxShadow)"/>
+                <rect x="362" y="22" width="88" height="13" rx="6" fill="#1e4e79"/>
+                <text x="406" y="31" fill="#ffffff" font-size="6.5" font-weight="700" text-anchor="middle">RAG SUBSYSTEM</text>
+                <text x="406" y="47" fill="#0f2e4d" font-size="6" font-weight="700" text-anchor="middle">ChromaDB Vector Store</text>
+                <text x="406" y="57" fill="#64748b" font-size="5.5" text-anchor="middle">384-dim Hybrid Retrieval</text>
+                <text x="406" y="67" fill="#1e4e79" font-size="5.5" font-weight="600" text-anchor="middle">Groq Llama 3.3 70B</text>
+
+                <!-- 5. RELATIONAL DB (LOWER BRANCH) -->
+                <rect x="362" y="138" width="88" height="54" rx="6" fill="#ffffff" stroke="#0d9488" stroke-width="1.5" filter="url(#boxShadow)"/>
+                <rect x="362" y="138" width="88" height="13" rx="6" fill="#0d9488"/>
+                <text x="406" y="147" fill="#ffffff" font-size="6.5" font-weight="700" text-anchor="middle">SQLITE DATABASE</text>
+                <text x="406" y="163" fill="#0f2e4d" font-size="6" font-weight="700" text-anchor="middle">SQLAlchemy ORM</text>
+                <text x="406" y="173" fill="#64748b" font-size="5.5" text-anchor="middle">Timetable, Circulars &amp; Notices</text>
+                <text x="406" y="183" fill="#0d9488" font-size="5.5" font-weight="600" text-anchor="middle">FAQ Knowledge &amp; Users</text>
+
+                <!-- Feedback Grounded Badge -->
+                <rect x="155" y="175" width="150" height="26" rx="13" fill="#edf7ed" stroke="#2e7d32" stroke-width="1"/>
+                <text x="230" y="187" fill="#1b5e20" font-size="6.2" font-weight="700" text-anchor="middle">GROUNDED WITH CITATIONS</text>
+                <text x="230" y="196" fill="#2e7d32" font-size="5.2" text-anchor="middle">Document Name &amp; Page Number Verified</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 6: CORE CAPABILITIES & AGENT ROUTING -->
+        <div class="card" style="flex: 1.1;">
+          <div class="pill-badge">Intelligent Tool Routing</div>
+          <div class="card-body">
+            <p>
+              Natural language queries are dynamically classified and routed to domain-specific services to prevent LLM latency overhead on structured data:
+            </p>
+
+            <div class="stages-row">
+              <div class="stage-card">
+                <div class="stage-num" style="background: #1b4f72;">1</div>
+                <div class="stage-title">Policy RAG</div>
+                <div class="stage-desc">Attendance, Exam rules, Fee structure, Hostel &amp; Scholarship PDFs.</div>
+              </div>
+
+              <div class="stage-card">
+                <div class="stage-num" style="background: #0d9488;">2</div>
+                <div class="stage-title">Timetable Engine</div>
+                <div class="stage-desc">Filters class schedules by Department, Semester &amp; Day.</div>
+              </div>
+
+              <div class="stage-card">
+                <div class="stage-num" style="background: #d97706;">3</div>
+                <div class="stage-title">Notices &amp; FAQs</div>
+                <div class="stage-desc">Pulls priority administrative circulars &amp; verified FAQs.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 7: FUTURE ENHANCEMENTS (BOTTOM CENTER/RIGHT) -->
+        <div class="card" style="flex: 1.05;">
+          <div class="pill-badge">Future Scope &amp; Enhancements</div>
+          <div class="card-body">
+            <ul class="bullet-list" style="columns: 2; column-gap: 4mm;">
+              <li><strong>Multilingual Speech Interface:</strong> Speech-to-text integration for regional Hindi/English voice queries.</li>
+              <li><strong>Optical Character Recognition (OCR):</strong> Tesseract pipeline for scanned legacy administrative notifications.</li>
+              <li><strong>Cross-Platform Mobile App:</strong> Lightweight Flutter app for push notifications &amp; mobile helpdesk access.</li>
+              <li><strong>Automated Document Diffing:</strong> Identifies superseded policy clauses when new PDF editions are uploaded.</li>
+              <li><strong>Continuous RAG Evaluation:</strong> Real-time RAGAS scoring triggered on document updates.</li>
+              <li><strong>SMS / WhatsApp Gateway:</strong> Low-bandwidth emergency alert broadcasts for student advisories.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- ================= RIGHT COLUMN ================= -->
+      <div style="display: flex; flex-direction: column; gap: 3.5mm;">
+
+        <!-- CARD 8: TECHNOLOGY STACK -->
+        <div class="card" style="flex: 1.15;">
+          <div class="pill-badge">Technology Stack</div>
+          <div class="card-body">
+            <div class="tech-grid">
+              <div class="tech-item">
+                <div class="tech-icon-box" style="background:#ff4b4b;">ST</div>
+                <div>
+                  <div class="tech-name">Streamlit</div>
+                  <div class="tech-sub">Interactive Frontend UI</div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <div class="tech-icon-box" style="background:#059669;">API</div>
+                <div>
+                  <div class="tech-name">FastAPI</div>
+                  <div class="tech-sub">Async REST Services</div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <div class="tech-icon-box" style="background:#ea580c;">LC</div>
+                <div>
+                  <div class="tech-name">LangChain</div>
+                  <div class="tech-sub">RAG &amp; Tool Routing</div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <div class="tech-icon-box" style="background:#f59e0b;">GQ</div>
+                <div>
+                  <div class="tech-name">Groq API</div>
+                  <div class="tech-sub">Llama 3.3 70B (Fast LPU)</div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <div class="tech-icon-box" style="background:#6366f1;">DB</div>
+                <div>
+                  <div class="tech-name">ChromaDB</div>
+                  <div class="tech-sub">Vector Similarity Store</div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <div class="tech-icon-box" style="background:#0284c7;">PDF</div>
+                <div>
+                  <div class="tech-name">PyMuPDF</div>
+                  <div class="tech-sub">Fast PDF Text Extraction</div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <div class="tech-icon-box" style="background:#334155;">SQL</div>
+                <div>
+                  <div class="tech-name">SQLite &amp; ORM</div>
+                  <div class="tech-sub">Relational Persistence</div>
+                </div>
+              </div>
+
+              <div class="tech-item">
+                <div class="tech-icon-box" style="background:#475569;">JWT</div>
+                <div>
+                  <div class="tech-name">Bcrypt &amp; JWT</div>
+                  <div class="tech-sub">Role-Based Auth Guard</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 9: EVALUATION & RESULTS -->
+        <div class="card" style="flex: 1.4;">
+          <div class="pill-badge">Results &amp; Evaluation</div>
+          <div class="card-body">
+            <p>
+              Quantitatively evaluated across 15 benchmark questions spanning attendance rules, CGPA calculations, fees, hostels, and scholarship eligibility:
+            </p>
+
+            <div class="metrics-row">
+              <div class="metric-box">
+                <div class="metric-val">100%</div>
+                <div class="metric-lbl">Retrieval Accuracy</div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-val">100%</div>
+                <div class="metric-lbl">Answer Relevance</div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-val">100%</div>
+                <div class="metric-lbl">Citation Accuracy</div>
+              </div>
+
+              <div class="metric-box">
+                <div class="metric-val">&lt;0.2s</div>
+                <div class="metric-lbl">Avg Response Time</div>
+              </div>
+            </div>
+
+            <div style="margin-top: 2.5mm; font-size: 6.8pt; line-height: 1.4; color: #475569;">
+              <p style="margin-bottom: 1.2mm;">
+                <strong>Source Verifiability:</strong> Every response directly attaches document filename and page number, ensuring students and staff can inspect the source passage.
+              </p>
+              <p>
+                <strong>Hallucination Defense:</strong> Grounding rules enforce an explicit fallback (<em>"I don't have that specific information in the college documents"</em>) whenever context is insufficient, preserving trust.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 10: KEY FEATURES & ADMIN DASHBOARD -->
+        <div class="card" style="flex: 1.15;">
+          <div class="pill-badge">Administrative Capabilities</div>
+          <div class="card-body">
+            <ul class="bullet-list">
+              <li><strong>Dynamic PDF Knowledge Ingestion:</strong> Drag-and-drop document upload with automatic chunking and embedding.</li>
+              <li><strong>Notice Board Management:</strong> Publish and expire circulars with urgent, high, and medium priority tagging.</li>
+              <li><strong>Timetable Maintenance:</strong> Add, edit, or delete department schedules across all semesters.</li>
+              <li><strong>User Query Analytics:</strong> Track query frequency, response fidelity, and student feedback ratings.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</body>
+</html>

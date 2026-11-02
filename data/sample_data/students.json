@@ -1,0 +1,47 @@
+[
+  {
+    "username": "student1",
+    "password": "password123",
+    "full_name": "Rahul Sharma",
+    "email": "rahul.sharma@rgit.edu",
+    "department": "Computer Science",
+    "semester": 3,
+    "enrollment_number": "CS2023001"
+  },
+  {
+    "username": "student2",
+    "password": "password123",
+    "full_name": "Priya Patel",
+    "email": "priya.patel@rgit.edu",
+    "department": "Computer Science",
+    "semester": 5,
+    "enrollment_number": "CS2022045"
+  },
+  {
+    "username": "student3",
+    "password": "password123",
+    "full_name": "Amit Kumar",
+    "email": "amit.kumar@rgit.edu",
+    "department": "Mechanical Engineering",
+    "semester": 7,
+    "enrollment_number": "ME2021089"
+  },
+  {
+    "username": "student4",
+    "password": "password123",
+    "full_name": "Neha Singh",
+    "email": "neha.singh@rgit.edu",
+    "department": "Electronics and Communication",
+    "semester": 3,
+    "enrollment_number": "EC2023022"
+  },
+  {
+    "username": "student5",
+    "password": "password123",
+    "full_name": "Vikram Verma",
+    "email": "vikram.verma@rgit.edu",
+    "department": "Civil Engineering",
+    "semester": 5,
+    "enrollment_number": "CE2022067"
+  }
+]

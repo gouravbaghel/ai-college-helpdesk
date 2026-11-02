@@ -1,0 +1,107 @@
+[
+  {
+    "question": "What is the minimum attendance requirement?",
+    "answer": "The minimum attendance requirement for all courses is 75%. Students falling below this threshold will not be permitted to appear for the end-semester examinations.",
+    "category": "Attendance"
+  },
+  {
+    "question": "What happens if I fall short of 75% attendance?",
+    "answer": "If you have attendance between 65% and 74%, you may apply for condonation by paying a fine of Rs. 1000/-, provided you have a valid medical certificate or evidence of participation in approved college activities. Below 65% is not condonable under any circumstances.",
+    "category": "Attendance"
+  },
+  {
+    "question": "How do I apply for medical leave?",
+    "answer": "Medical leave must be applied for within 3 working days of returning to college. You need to submit a written application to your HOD along with a valid medical certificate from a registered medical practitioner.",
+    "category": "Attendance"
+  },
+  {
+    "question": "What are the passing marks for end-semester exams?",
+    "answer": "A student must secure a minimum of 40% in the end-semester examination and a minimum aggregate of 50% (internal + external) to pass a course.",
+    "category": "Examination"
+  },
+  {
+    "question": "How is the CGPA calculated?",
+    "answer": "CGPA is calculated as the sum of (Credits × Grade Points) divided by the total number of credits across all semesters. The grade points are: O=10, A+=9, A=8, B+=7, B=6, C=5, F=0.",
+    "category": "Examination"
+  },
+  {
+    "question": "Can I apply for re-evaluation of my answer script?",
+    "answer": "Yes, you can apply for re-evaluation within 15 days of result declaration by paying a fee of Rs. 500 per subject. The application form is available at the exam cell.",
+    "category": "Examination"
+  },
+  {
+    "question": "What are the tuition fees for B.Tech Computer Science?",
+    "answer": "The tuition fee for B.Tech Computer Science is Rs. 1,20,000 per annum for the current academic year. Additional fees include library, lab, and exam fees.",
+    "category": "Fees"
+  },
+  {
+    "question": "When is the last date to pay semester fees?",
+    "answer": "Semester fees must be paid within the first two weeks of the commencement of the semester. A late fee of Rs. 100 per day will be levied thereafter.",
+    "category": "Fees"
+  },
+  {
+    "question": "Are there any merit-based scholarships available?",
+    "answer": "Yes, the college offers the 'Director's Merit Scholarship' to students securing a CGPA of 9.0 and above. It covers 50% of the tuition fees for the subsequent academic year.",
+    "category": "Scholarships"
+  },
+  {
+    "question": "How can I apply for the hostel?",
+    "answer": "Hostel applications must be submitted online through the student portal after admission. Allocation is based on distance from the student's hometown and merit.",
+    "category": "Hostel"
+  },
+  {
+    "question": "What are the hostel curfew timings?",
+    "answer": "The hostel curfew is 9:00 PM for all students. First-year students have an earlier curfew of 8:00 PM for the first semester.",
+    "category": "Hostel"
+  },
+  {
+    "question": "Are visitors allowed in the hostel?",
+    "answer": "Only parents and registered local guardians are allowed to visit during specified visiting hours (4:00 PM to 6:00 PM on weekdays, 10:00 AM to 6:00 PM on weekends). Visitors are not allowed inside student rooms.",
+    "category": "Hostel"
+  },
+  {
+    "question": "How many books can I borrow from the library?",
+    "answer": "UG students can borrow up to 4 books for a period of 14 days. PG students can borrow 6 books for 21 days.",
+    "category": "Library"
+  },
+  {
+    "question": "What is the penalty for late return of library books?",
+    "answer": "A fine of Rs. 5 per day per book will be charged for the first week of delay, and Rs. 10 per day thereafter.",
+    "category": "Library"
+  },
+  {
+    "question": "Who is eligible for campus placements?",
+    "answer": "Students with no active backlogs, a minimum CGPA of 6.5, and 75% attendance in placement training sessions are eligible to register for campus placements.",
+    "category": "Placements"
+  },
+  {
+    "question": "What is the dress code for placement interviews?",
+    "answer": "Students must wear formal attire: light-colored shirts, dark trousers, and formal shoes for men; formal Indian or Western wear for women. Ties are mandatory for men during final interviews.",
+    "category": "Placements"
+  },
+  {
+    "question": "What sports facilities are available on campus?",
+    "answer": "The campus features a cricket ground, football field, two basketball courts, a tennis court, indoor badminton courts, and a fully equipped gymnasium.",
+    "category": "Sports"
+  },
+  {
+    "question": "What is the college's policy on ragging?",
+    "answer": "The college has a zero-tolerance policy towards ragging. Any student found guilty of ragging will face immediate suspension and possible expulsion, along with an FIR filed with the local police as per UGC guidelines.",
+    "category": "Discipline"
+  },
+  {
+    "question": "What is the dress code for regular classes?",
+    "answer": "Students are expected to dress modestly and appropriately. Lab sessions require closed-toe shoes and lab coats. Sleeveless tops and shorts are not permitted in academic blocks.",
+    "category": "Discipline"
+  },
+  {
+    "question": "Can I use my mobile phone in class?",
+    "answer": "Mobile phones must be kept on silent mode and inside bags during class hours. Use of mobile phones is strictly prohibited in classrooms, labs, and the library unless instructed by the faculty for academic purposes.",
+    "category": "Discipline"
+  },
+  {
+    "question": "Where can I report a maintenance issue in the classroom?",
+    "answer": "Maintenance issues can be reported via the helpdesk portal or directly to the Estate Office located on the ground floor of the administrative block.",
+    "category": "General"
+  }
+]

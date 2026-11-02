@@ -1,0 +1,52 @@
+# AI-Powered College Helpdesk - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Backend Framework
+fastapi
+uvicorn[standard]
+python-multipart
+aiofiles
+
+# Database
+sqlalchemy
+
+# Authentication
+python-jose[cryptography]
+passlib[bcrypt]
+bcrypt==4.0.1
+
+# Configuration
+python-dotenv
+pydantic
+pydantic-settings
+
+# AI / LLM
+langchain
+langchain-groq
+langchain-huggingface
+langchain-community
+langchain-text-splitters
+langgraph
+
+# Vector Store
+chromadb
+
+# Embeddings
+sentence-transformers
+
+# PDF Processing
+PyMuPDF
+
+# Frontend
+streamlit
+requests
+plotly
+pandas
+numpy
+
+# PDF Generation (for sample data)
+fpdf2
+
+# Testing
+httpx
+pytest

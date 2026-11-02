@@ -1,0 +1,39 @@
+# Render Blueprint specification (render.yaml)
+# Deploy FastAPI backend and Streamlit frontend together
+services:
+  # 1. FastAPI REST API Service
+  - type: web
+    name: college-helpdesk-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port $PORT
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.8
+      - key: GROQ_API_KEY
+        sync: false
+      - key: JWT_SECRET_KEY
+        generateValue: true
+      - key: DATABASE_URL
+        value: sqlite:///./college_helpdesk.db
+      - key: CHROMA_PERSIST_DIR
+        value: ./chroma_db
+
+  # 2. Streamlit Web UI Service
+  - type: web
+    name: college-helpdesk-ui
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true
+    plan: free
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.8
+      - key: API_BASE_URL
+        fromService:
+          type: web
+          name: college-helpdesk-api
+          property: host
+          transformation: https://{host}/api

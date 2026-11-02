@@ -1,0 +1,125 @@
+[
+  {
+    "semester": 3,
+    "department": "Computer Science",
+    "schedule": {
+      "Monday": [
+        {"time": "09:00-10:00", "subject": "Data Structures", "faculty": "Dr. A. Sharma", "room": "CS-101"},
+        {"time": "10:00-11:00", "subject": "Digital Logic Design", "faculty": "Prof. B. Kumar", "room": "CS-101"},
+        {"time": "11:00-12:00", "subject": "Discrete Mathematics", "faculty": "Dr. C. Verma", "room": "CS-101"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "Data Structures Lab", "faculty": "Dr. A. Sharma", "room": "Lab-1"}
+      ],
+      "Tuesday": [
+        {"time": "09:00-10:00", "subject": "Object Oriented Programming", "faculty": "Prof. D. Singh", "room": "CS-101"},
+        {"time": "10:00-11:00", "subject": "Data Structures", "faculty": "Dr. A. Sharma", "room": "CS-101"},
+        {"time": "11:00-12:00", "subject": "Computer Organization", "faculty": "Dr. E. Patel", "room": "CS-101"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "OOP Lab", "faculty": "Prof. D. Singh", "room": "Lab-2"}
+      ],
+      "Wednesday": [
+        {"time": "09:00-10:00", "subject": "Discrete Mathematics", "faculty": "Dr. C. Verma", "room": "CS-101"},
+        {"time": "10:00-11:00", "subject": "Object Oriented Programming", "faculty": "Prof. D. Singh", "room": "CS-101"},
+        {"time": "11:00-12:00", "subject": "Digital Logic Design", "faculty": "Prof. B. Kumar", "room": "CS-101"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "DLD Lab", "faculty": "Prof. B. Kumar", "room": "Lab-3"}
+      ],
+      "Thursday": [
+        {"time": "09:00-10:00", "subject": "Computer Organization", "faculty": "Dr. E. Patel", "room": "CS-101"},
+        {"time": "10:00-11:00", "subject": "Data Structures", "faculty": "Dr. A. Sharma", "room": "CS-101"},
+        {"time": "11:00-12:00", "subject": "Object Oriented Programming", "faculty": "Prof. D. Singh", "room": "CS-101"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-02:00", "subject": "Library / Mentoring", "faculty": "-", "room": "Library"}
+      ],
+      "Friday": [
+        {"time": "09:00-10:00", "subject": "Digital Logic Design", "faculty": "Prof. B. Kumar", "room": "CS-101"},
+        {"time": "10:00-11:00", "subject": "Computer Organization", "faculty": "Dr. E. Patel", "room": "CS-101"},
+        {"time": "11:00-12:00", "subject": "Discrete Mathematics", "faculty": "Dr. C. Verma", "room": "CS-101"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "Sports / Extracurricular", "faculty": "-", "room": "Ground"}
+      ]
+    }
+  },
+  {
+    "semester": 5,
+    "department": "Computer Science",
+    "schedule": {
+      "Monday": [
+        {"time": "09:00-10:00", "subject": "Database Management Systems", "faculty": "Dr. F. Khan", "room": "CS-201"},
+        {"time": "10:00-11:00", "subject": "Operating Systems", "faculty": "Prof. G. Reddy", "room": "CS-201"},
+        {"time": "11:00-12:00", "subject": "Computer Networks", "faculty": "Dr. H. Iyer", "room": "CS-201"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "DBMS Lab", "faculty": "Dr. F. Khan", "room": "Lab-4"}
+      ],
+      "Tuesday": [
+        {"time": "09:00-10:00", "subject": "Theory of Computation", "faculty": "Dr. I. Bose", "room": "CS-201"},
+        {"time": "10:00-11:00", "subject": "Software Engineering", "faculty": "Prof. J. Das", "room": "CS-201"},
+        {"time": "11:00-12:00", "subject": "Database Management Systems", "faculty": "Dr. F. Khan", "room": "CS-201"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "OS Lab", "faculty": "Prof. G. Reddy", "room": "Lab-5"}
+      ],
+      "Wednesday": [
+        {"time": "09:00-10:00", "subject": "Computer Networks", "faculty": "Dr. H. Iyer", "room": "CS-201"},
+        {"time": "10:00-11:00", "subject": "Operating Systems", "faculty": "Prof. G. Reddy", "room": "CS-201"},
+        {"time": "11:00-12:00", "subject": "Theory of Computation", "faculty": "Dr. I. Bose", "room": "CS-201"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "Networks Lab", "faculty": "Dr. H. Iyer", "room": "Lab-6"}
+      ],
+      "Thursday": [
+        {"time": "09:00-10:00", "subject": "Software Engineering", "faculty": "Prof. J. Das", "room": "CS-201"},
+        {"time": "10:00-11:00", "subject": "Database Management Systems", "faculty": "Dr. F. Khan", "room": "CS-201"},
+        {"time": "11:00-12:00", "subject": "Computer Networks", "faculty": "Dr. H. Iyer", "room": "CS-201"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-02:00", "subject": "Aptitude Training", "faculty": "T&P Cell", "room": "Seminar Hall"}
+      ],
+      "Friday": [
+        {"time": "09:00-10:00", "subject": "Operating Systems", "faculty": "Prof. G. Reddy", "room": "CS-201"},
+        {"time": "10:00-11:00", "subject": "Theory of Computation", "faculty": "Dr. I. Bose", "room": "CS-201"},
+        {"time": "11:00-12:00", "subject": "Software Engineering", "faculty": "Prof. J. Das", "room": "CS-201"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "Mini Project", "faculty": "-", "room": "Lab-4"}
+      ]
+    }
+  },
+  {
+    "semester": 7,
+    "department": "Computer Science",
+    "schedule": {
+      "Monday": [
+        {"time": "09:00-10:00", "subject": "Artificial Intelligence", "faculty": "Dr. K. Menon", "room": "CS-301"},
+        {"time": "10:00-11:00", "subject": "Cloud Computing", "faculty": "Prof. L. Gupta", "room": "CS-301"},
+        {"time": "11:00-12:00", "subject": "Web Development", "faculty": "Dr. M. Joshi", "room": "CS-301"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "AI Lab", "faculty": "Dr. K. Menon", "room": "Lab-7"}
+      ],
+      "Tuesday": [
+        {"time": "09:00-10:00", "subject": "Information Security", "faculty": "Dr. N. Rao", "room": "CS-301"},
+        {"time": "10:00-11:00", "subject": "Artificial Intelligence", "faculty": "Dr. K. Menon", "room": "CS-301"},
+        {"time": "11:00-12:00", "subject": "Cloud Computing", "faculty": "Prof. L. Gupta", "room": "CS-301"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "Web Dev Lab", "faculty": "Dr. M. Joshi", "room": "Lab-8"}
+      ],
+      "Wednesday": [
+        {"time": "09:00-10:00", "subject": "Web Development", "faculty": "Dr. M. Joshi", "room": "CS-301"},
+        {"time": "10:00-11:00", "subject": "Information Security", "faculty": "Dr. N. Rao", "room": "CS-301"},
+        {"time": "11:00-12:00", "subject": "Elective-I (Data Science)", "faculty": "Prof. O. Sen", "room": "CS-301"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "Major Project Phase I", "faculty": "-", "room": "Lab-7"}
+      ],
+      "Thursday": [
+        {"time": "09:00-10:00", "subject": "Elective-I (Data Science)", "faculty": "Prof. O. Sen", "room": "CS-301"},
+        {"time": "10:00-11:00", "subject": "Artificial Intelligence", "faculty": "Dr. K. Menon", "room": "CS-301"},
+        {"time": "11:00-12:00", "subject": "Cloud Computing", "faculty": "Prof. L. Gupta", "room": "CS-301"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "Placement Training", "faculty": "T&P Cell", "room": "Auditorium"}
+      ],
+      "Friday": [
+        {"time": "09:00-10:00", "subject": "Web Development", "faculty": "Dr. M. Joshi", "room": "CS-301"},
+        {"time": "10:00-11:00", "subject": "Information Security", "faculty": "Dr. N. Rao", "room": "CS-301"},
+        {"time": "11:00-12:00", "subject": "Elective-I (Data Science)", "faculty": "Prof. O. Sen", "room": "CS-301"},
+        {"time": "12:00-01:00", "subject": "Lunch Break", "faculty": "-", "room": "-"},
+        {"time": "01:00-03:00", "subject": "Major Project Phase I", "faculty": "-", "room": "Lab-8"}
+      ]
+    }
+  }
+]
